@@ -1,0 +1,20 @@
+{
+  "name": "devtinder_backend",
+  "version": "1.0.0",
+  "description": "Tinder Dev Project by Akshay Saini",
+  "main": "index.js",
+  "scripts": {
+    "start":"node src/app.js",
+    "dev":"nodemon src/app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "Satish Akula",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4"
+  }
+}
