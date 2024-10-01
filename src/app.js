@@ -1,14 +1,20 @@
 const express = require("express");
 const app = express();
+const PORT = 4000;
+
+app.get("/user", (req, res) => {
+  res.send({ firstName: "Satish", lastName: "Akula" });
+});
+app.post("/user", (req, res) => {
+  res.send("data saved successfully");
+});
+app.delete("/user", (req, res) => {
+  res.send("Data deleted successfully ");
+});
+
 app.use("/", (req, res) => {
-  res.send("Hello namaste.....");
+  res.send("Hello namaste....");
 });
-app.use("/home", (req, res) => {
-  res.send("Hello namaste..... from home");
-});
-app.use("/test", (req, res) => {
-  res.send("Hello Namaste... from test");
-});
-app.listen(5555, () => {
-  console.log("Server is Running at port 5555");
+app.listen(PORT, () => {
+  console.log(`Server is running at port ${PORT}`);
 });
