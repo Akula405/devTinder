@@ -37,3 +37,11 @@ Episode-5
 - difference of app.use() and app.all()
 - dummy adminAuth middleware
 - dummy userAuth middleware expet for uesr/login
+
+Episode-6
+
+- Create a free cluster on mongodb official website (mangodb Atlas)
+- install mongoose library
+- connect our app to the Database
+- call the connectDb function and connect to data base before statrtin the application on server
+- create a user Schema & user model
