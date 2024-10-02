@@ -22,3 +22,9 @@ Episode-4
 - order of routes matter a lot
 - install postman app and make workspace and test api call
 - write logic to handle get,post,delete,patch api calls and test them in postman
+
+Episode-5
+
+- multiple Route handlers
+- next()
+- next function and errors along with res.send()
