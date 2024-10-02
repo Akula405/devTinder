@@ -28,3 +28,8 @@ Episode-5
 - multiple Route handlers
 - next()
 - next function and errors along with res.send()
+- app.use('/',[rh,rh2,rh3,rh4,rh5]) => we can also put all or some request handlers(rhs) in array
+- reading query params
+- reading dynamic routes
+- explore routing and use of \*,?,+,() in routing
+- use of regx (/a/ , /.\*fly$/ etc) in routing
