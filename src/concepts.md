@@ -33,3 +33,7 @@ Episode-5
 - reading dynamic routes
 - explore routing and use of \*,?,+,() in routing
 - use of regx (/a/ , /.\*fly$/ etc) in routing
+- what is middleware and why we need middlewares
+- difference of app.use() and app.all()
+- dummy adminAuth middleware
+- dummy userAuth middleware expet for uesr/login
