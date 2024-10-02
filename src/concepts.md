@@ -45,3 +45,7 @@ Episode-6
 - connect our app to the Database
 - call the connectDb function and connect to data base before statrtin the application on server
 - create a user Schema & user model
+- create post/signup api and send data to database
+- push some documents(data) using api calls from postman
+- add express.json() middleware to our app
+- make post/signup api dynamic from postman or enduser

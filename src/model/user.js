@@ -2,9 +2,10 @@ const { default: mongoose } = require("mongoose");
 const mongoos = require("mongoose");
 
 const userSchema = mongoose.Schema({
-  firstname: { type: String },
+  firstName: { type: String }, //must camelCase otherwise not stored particular property in database
   lastName: { type: String },
   email: { type: String },
+  password: { type: String },
   age: { type: Number },
   gender: { type: String },
 });
