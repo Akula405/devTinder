@@ -48,4 +48,9 @@ Episode-6
 - create post/signup api and send data to database
 - push some documents(data) using api calls from postman
 - add express.json() middleware to our app
-- make post/signup api dynamic from postman or enduser
+- make post/signup api dynamic from postman or end user
+
+Episode-7
+
+- make get/feed api to get all the users by using 'User.find({})' method
+- make get/user api to get particular user by using 'User.findOne({emai:userEmail})' method
