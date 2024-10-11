@@ -42,6 +42,21 @@ app.get("/user", async (req, res) => {
   }
 });
 
+app.patch("/user", async (req, res) => {
+  const userId = req.body.userId;
+  const data = req.body;
+  console.log(data);
+  try {
+    const updatedUser = await User.findByIdAndUpdate(userId, data, {
+      returnDocument: "after", // "after"-latest data,"before"-previous data
+    });
+    console.log(updatedUser);
+    res.send("User data uopdated successfully....");
+  } catch (err) {
+    res.status(400).send("Something went wrong.... ", err.message);
+  }
+});
+
 app.delete("/user", async (req, res) => {
   const userId = req.body.userId;
   console.log(userId);
