@@ -55,3 +55,4 @@ Episode-7
 - make get/feed api to get all the users by using 'User.find({})' method
 - make get/user api to get particular user by using 'User.findOne({emai:userEmail})' method
 - make delete/user api to delete user by id using User.findByIdAndDelete(userId) or User.findByIdAndDelete({\_id:userId})
+- make patch-/user api to update user data using User.findByIdAndUpdate() method
