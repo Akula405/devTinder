@@ -56,3 +56,12 @@ Episode-7
 - make get/user api to get particular user by using 'User.findOne({emai:userEmail})' method
 - make delete/user api to delete user by id using User.findByIdAndDelete(userId) or User.findByIdAndDelete({\_id:userId})
 - make patch-/user api to update user data using User.findByIdAndUpdate() method
+
+Episode-8
+
+- User schema validations like required:true, unique:true etc, custom validate functions for new and existing users
+- minLength,maxLength,min,max,defult,trim,uppercase,lowercase
+- Adding timestamps
+- Add maximum validations for all the user data according to documaentation
+- API level validations like restrict the updating user data for the particular fieilds in API level etc on /patch and signup api
+- Data sanitization(sanitizing the data before going into the data base)-Add API validations on each field

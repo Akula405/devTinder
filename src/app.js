@@ -24,7 +24,7 @@ app.get("/feed", async (req, res) => {
       res.send(users);
     }
   } catch (err) {
-    res.status(400).send("something went wrong.... ", +err.message);
+    res.status(400).send("something went wrong.... " + err.message);
   }
 });
 
@@ -45,16 +45,26 @@ app.get("/user", async (req, res) => {
 app.patch("/user", async (req, res) => {
   const userId = req.body.userId;
   const data = req.body;
-  console.log(data);
+
   try {
+    const updatedFields = ["firstName", "about", "gender", "skills", "userId"];
+    const isUpdateAllowed = Object.keys(data).every((k) =>
+      updatedFields.includes(k)
+    );
+    if (!isUpdateAllowed) {
+      throw new Error("Update not allowed");
+    }
+    if (data?.skills.length > 10) {
+      throw new Error("Skills should not be greater than 10");
+    }
     const updatedUser = await User.findByIdAndUpdate(userId, data, {
       returnDocument: "after", // "after"-latest data,"before"-previous data
       runValidators: true, //to enable validate function for exsisting user
     });
-    console.log(updatedUser);
+
     res.send("User data uopdated successfully....");
   } catch (err) {
-    res.status(400).send("Something went wrong.... " + err.message);
+    res.status(400).send("Something went wrong " + err.message);
   }
 });
 
