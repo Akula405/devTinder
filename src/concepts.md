@@ -68,3 +68,11 @@ Episode-8
 - Never trust requiest.body
 - install validator library
 - explore validator function and use validator function for email,password etc.
+
+Episode-9
+
+- Validate the signup api using the helper function
+- Install bcrypt package
+- Create passwordHash using bcrypt.hash and save the user data with encrypted password
+- create login api
+- compare passwords and throw erros
