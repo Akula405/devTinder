@@ -75,4 +75,13 @@ Episode-9
 - Install bcrypt package
 - Create passwordHash using bcrypt.hash and save the user data with encrypted password
 - create login api
-- compare passwords and throw erros
+- compare passwords and throw erros if email and passwords are invalid
+
+Episode-10
+
+- install a cookie-parser
+- send dummy cookie to user
+- get /profile api and check the cookie back
+- Install jwtwebtoken
+- in /login api,after emaiand pasword validation create jwt token and send back to the user
+- Read the cookies and find out the logged in user inside the /profile api
