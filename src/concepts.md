@@ -65,3 +65,6 @@ Episode-8
 - Add maximum validations for all the user data according to documaentation
 - API level validations like restrict the updating user data for the particular fieilds in API level etc on /patch and signup api
 - Data sanitization(sanitizing the data before going into the data base)-Add API validations on each field
+- Never trust requiest.body
+- install validator library
+- explore validator function and use validator function for email,password etc.

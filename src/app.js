@@ -47,7 +47,14 @@ app.patch("/user", async (req, res) => {
   const data = req.body;
 
   try {
-    const updatedFields = ["firstName", "about", "gender", "skills", "userId"];
+    const updatedFields = [
+      "firstName",
+      "about",
+      "gender",
+      "skills",
+      "userId",
+      "photoUrl",
+    ]; //only specific fields should be updates
     const isUpdateAllowed = Object.keys(data).every((k) =>
       updatedFields.includes(k)
     );
