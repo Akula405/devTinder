@@ -6,7 +6,9 @@ const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
 const { validateSignupData } = require("./utils/validation");
+const { userAuth } = require("./middleware/auth");
 const PORT = 4000;
+
 app.use(express.json()); //json middleware => convert json to json object
 app.use(cookieParser()); // middleware for to read cookie on each request
 
@@ -68,22 +70,12 @@ app.get("/feed", async (req, res) => {
   }
 });
 
-app.get("/profile", async (req, res) => {
+app.get("/profile", userAuth, async (req, res) => {
   try {
-    const cookies = req.cookies;
-    const { token } = cookies;
-    if (!token) {
-      throw new Error("Token invalid");
-    }
-    const decodedMsg = await jwt.verify(token, "Dev@Tinder405");
-    console.log("decodeddd", decodedMsg);
-    const { _id } = decodedMsg;
-    const user = await User.findById(_id);
+    const user = req.user;
     if (!user) {
-      throw new Error("User does not exist");
+      throw new Error("user does not exist..");
     }
-    console.log("user....", user);
-
     res.send(user);
   } catch (err) {
     res.status(400).send("Error" + err.message);
