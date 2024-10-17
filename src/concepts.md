@@ -86,4 +86,5 @@ Episode-10
 - in /login api,after emaiand pasword validation create jwt token and send back to the user
 - Read the cookies and find out the logged in user inside the /profile api
 - implemented userAuth middleware to impliment authentication logic
-- placed in all the api requests excluding /login,/signup apis
+- placed userAuth middleware in all the api requests excluding /login,/signup apis
+- setting expiration time for jwt token and cookies
